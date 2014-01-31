@@ -52,6 +52,24 @@ nnoremap <Plug>(easyoperator-phrase-delete)
 nnoremap <Plug>(easyoperator-phrase-yank)
     \ :call easyoperator#phrase#selectphraseyank()<CR>
 
+let g:EasyOperator_phrase_do_mapping = get(
+    \ g:, 'EasyOperator_phrase_do_mapping', 1)
+if g:EasyOperator_phrase_do_mapping
+        \ && !hasmapto('<Plug>(easyoperator-phrase-select)')
+        \ && empty(maparg( '<Plug>(easymotion-prefix)p', 'ov'))
+        \ && empty(maparg('d<Plug>(easymotion-prefix)p', 'n' ))
+        \ && empty(maparg('y<Plug>(easymotion-prefix)p', 'n' ))
+
+    if !hasmapto('<Plug>(easymotion-prefix)')
+        map <Leader><Leader> <Plug>(easymotion-prefix)
+    endif
+
+    omap <silent>  <Plug>(easymotion-prefix)p <Plug>(easyoperator-phrase-select)
+    xmap <silent>  <Plug>(easymotion-prefix)p <Plug>(easyoperator-phrase-select)
+    nmap <silent> d<Plug>(easymotion-prefix)p <Plug>(easyoperator-phrase-delete)
+    nmap <silent> y<Plug>(easymotion-prefix)p <Plug>(easyoperator-phrase-yank)
+endif
+
 " Highlight:
 let s:shade_hl_first_pos = {
     \   'gui'     : ['red' , '#FFFFFF' , 'NONE']
