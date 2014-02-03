@@ -1,7 +1,7 @@
 "=============================================================================
 " FILE: autoload/easyoperator/phrase.vim
 " AUTHOR: haya14busa
-" Last Change: 31 Jan 2014.
+" Last Change: 03 Feb 2014.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
