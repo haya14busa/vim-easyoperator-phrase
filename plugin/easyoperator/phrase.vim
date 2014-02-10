@@ -1,7 +1,7 @@
 "=============================================================================
 " FILE: plugin/easyoperator/phrase.vim
 " AUTHOR: haya14busa
-" Last Change: 31 Jan 2014.
+" Last Change: 10 Feb 2014.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -79,7 +79,7 @@ let s:shade_hl_first_pos = {
 
 let g:EasyOperator_phrase_first     = get(g:,
     \ 'EasyOperator_phrase_first', 'EasyOperatorFirstPhrase')
-call EasyMotion#init#InitHL(g:EasyOperator_phrase_first,
+call EasyMotion#highlight#InitHL(g:EasyOperator_phrase_first,
     \ s:shade_hl_first_pos)
 
 " Restore 'cpoptions' {{{
