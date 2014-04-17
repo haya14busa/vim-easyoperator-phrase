@@ -63,7 +63,7 @@ DEFAULT MAPPINGS                         *easyoperator-phrase-default-mappings*
 
 Default mappings:
 
-        {operator}<Plug>(easymotion-prefix)l
+        {operator}<Plug>(easymotion-prefix)p
 
     NOTE: Default <Plug>(easymotion-prefix) is <Leader><Leader>
 
@@ -91,10 +91,10 @@ CUSTOM MAPPINGS                           *easyoperator-phrase-custom-mappings*
 
 Example:
 >
-    omap <Leader>L  <Plug>(easyoperator-phrase-select)
-    xmap <Leader>L  <Plug>(easyoperator-phrase-select)
-    nmap d<Leader>L <Plug>(easyoperator-phrase-delete)
-    nmap p<Leader>L <Plug>(easyoperator-phrase-yank)
+    omap <Leader>p  <Plug>(easyoperator-phrase-select)
+    xmap <Leader>p  <Plug>(easyoperator-phrase-select)
+    nmap d<Leader>p <Plug>(easyoperator-phrase-delete)
+    nmap p<Leader>p <Plug>(easyoperator-phrase-yank)
 
 ==============================================================================
 vim:tw=78:sw=4:ts=8:ft=help:norl:
